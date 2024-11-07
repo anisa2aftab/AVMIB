@@ -1,0 +1,82 @@
+
+# AVMIB: An open-source desktop application for MIBCI EEG data visualization
+
+## Description: 
+
+AVMIB is an open-source cross-platform desktop application for visualization of data from motor imagery (MI) based BCI systems. It is a standalone application, hence involves no complexity of extra software installation. The design of AVMIB has been made modular and straightforward. The software architecture is based on the well-known feature extraction algorithm Common Spatial Pattern (CSP) and regularized CSP (RCSP). AVMIB presents data visualization and analysis of 11 RCSP algorithms including classical CSP on total of 17 subjects’ MI data from 3 standard BCI competition datasets. Additionally, AVMIB enables subject performance analysis using machine learning, based on several key metrics. 
+
+Motivation was to provide this resource (AVMIB) to the inexperienced researchers such as fresh Masters/PhD students to develop an understanding of the multi-stage analysis of motor imagery based BCI datasets. It is a very easy-to-use desktop application and does not require a background with good programming skills to use it. AVMIB uses machine learning (ML)
+for analyzing BCI data and the parameters required for analysis can be easily selected using Graphical User Interface (GUI). AVMIB runs in all the major OS platforms (such as, Linux, Windows, and OS X). One of the major goals of AVMIB is to help user to develop in-depth understanding of the BCI domain without being concerned on the programming side.
+
+## Datasets used: 
+
+In order to examine the working of AVMIB application, EEG data from 3 publicly available BCI competition datasets have been considered. As a whole there are 17 subjects under consideration. These three data sets contain EEG signals from subjects imagining limb actions e.g., left hand, right hand, tongue or foot activity [1]. Here is a brief description.
+
+### (a) BCI competition 3 dataset 4a:
+EEG signals from data set 4a [2] of BCI competition 3 [3], made up of five subjects underwent foot and right hand movement imagination. For EEG signal acquisition 118 electrodes were used. The total number of trials including testing and training set were 280. Each subject has a training set and a testing set of different size, specifically 168, 224, 84, 56 and 28 made up the training set, whereas 112, 56, 196, 224 and 252 composed the testing set for five subjects respectively.
+
+###  (b) BCI competition 3 data set 3a:
+EEG signals from data set 3a [4] of BCI competition 3 [3], consists of three subjects. This dataset contains MI signals with 4 classes (left hand, foot, right hand, and tongue). 60 electrodes were used to collect EEG signals. For the present study, only left- and right-hand MI EEG signals were taken into consideration.
+In this dataset for subject B1, a total of 45 trials available per class in both training and testing sets, whereas for subjects B2 and B3 each class has 30 trials in both sets.
+
+### (c) BCI competition 4 data set 2a:
+There are 9 subjects in data set 2a [5], from BCI competition [6] 4 which contains MI EEG signals of 4 classes, such as right hand, foot, left hand and tongue. For EEG signal acquisition 22 electrodes were used. In the present context, left and right-hand MI EEG signals were taken into account. In this case the training and testing sets both contain 72 trials for each class for each subject.
+
+## Algorithms discussed:
+AVMIB employs common spatial pattern (CSP) algorithm and its regularized variants for feature extraction. CSP is one of the most popular and efficient algorithms in motor imagery (MI) based BCI domain. The aim of CSP is to find the spatial filters which maximizes the variance of one class while minimizing the variance of the other class [7]. Hence maximizes the discriminability between two classes [8, 9]. CSP algorithm is proved to be an efficient algorithm, especially during BCI competitions [10, 11].
+
+Despite of its efficiency and widespread use, it is very sensitive to noise and prone to overfitting with small training set [12, 13]. To overcome this issue the researchers developed regularized CSP algorithms by adding prior information to the learning process [9, 10, 11, 12]. It has been shown that the regularized CSP (aka RCSP) outperformed the classical CSP. 
+
+CSP can be regularized in many different ways. Two major approaches are discussed here [13], i.e., (i) regularizing covariance matrix and (ii) regularizing the objective function of CSP. In the first approach prior knowledge is incorporated into the spatial covariance matrix estimation as the regularization terms. Based on the this approach several CSP algorithms have been designed. Composite CSP (CCSP1 ans CCSP2), Regularized CSP with Generic Learning (GLRCSP) and Regularized CSP with Diagonal Loading (DLRCSP) are few names of such regularized CSP algorithms. Here is a brief description of the algorithms. In case of DLRCSP regularization parameter, gamama is used for the regularization of covariance matrix. Based on the methods used for the selection of gamama DLRCSP can be of 3 types, such as  DLCSPauto, DLCSPcv and DLCSPcvdiff. In the second approach i.e. regularizing the objective function, a regularization term is added to the CSP objective function to penalize spatial filter solutions, that do not meet a priori. There are several there are several regularized CSP algorithms based on this principle, such as, CSP with Tikhonov Regularization(TRCSP), CSP with Weighted Tikhonov Regularization (WTRCSP) and Spatially Regularized CSP (SRCSP) etc. 
+
+## Method:
+AVMIB has been developed in MATLAB version 2020a. The front-end was
+designed using MATLAB appdesigner, the GUI development environment of MATLAB. In the appdesigner, the file extension is .mlapp. There exist two tabs in each .mlapp file, Design view and Code view. The whole function logic is defined in the Code view tab and the design layout is drawn in Design view tab. In the proposed  application four types of functionalities have been included such as plotting of filtered and raw EEG signal, Subject wise accuracy
+analysis, Subject wise performance metrics analysis and topographical map of best CSP filter which increases discriminability between the two classes under consideration. Each of the four functionalities has been represented by individual module and each module corresponds to a sub-GUI. Each of these
+sub-GUIs contains the logic behind each process. Effort has been made to access the GUI without the need of MATLAB installation for the users. For the present study a performance comparison between classical CSP and other types of regularized CSP algorithms such as CCSP, GLRCSP, DLRCSP, SRCSP and TRCSP [13] etc. have been presented in the form of a graphical representation.
+
+AVMIB takes input EEG data and displays plot after preprocessing(filtering) in GUI which makes it easy to get insight into the data used. AVMIB uses the key performance metrics such as Specificity, Sensitivity, Precision, Recall used in machine learning along with accuracy, for performance evaluation in graphical form that helps user to develop in-depth understanding of the domain. AVMIB also portrays the result in the form of a confusion matrix and AUC-ROC curve for each subject, which are useful to build understanding about the classifier model.
+
+AVMIB interface represents each feature by individual pushbutton, hence, to access each functionality, pushbutton is the gateway as shown in Figures below. The first section is associated with the filtering and plotting of EEG signal before and after filtering. The second section is concerned with the subject wise accuracy assessment upon choosing a specific dataset and algorithm. The third section is related to the evaluation of performance metrics such as, Sensitivity, Specificity, Precision and Recall of each subject. The fourth section is about topographical plot of scalp. Each of the functionality is described by figures below.
+
+
+
+
+# References:
+
+[1] Gert Pfurtscheller and Christa Neuper. Motor imagery and direct braincomputer communication. Proceedings of the IEEE, 89(7):1123–1134, 2001.
+
+[2] Guido Dornhege, Benjamin Blankertz, Gabriel Curio, and K-R Muller. Boosting bit rates in noninvasive eeg single-trial classifications by feature combination and multiclass paradigms. IEEE transactions on biomedical engineering, 51(6):993–1002, 2004.
+
+[3] Benjamin Blankertz, K-R Muller, Dean J Krusienski, Gerwin Schalk, Jonathan R Wolpaw, Alois Schlogl, Gert Pfurtscheller, Jd R Millan, Michael Schroder, and Niels Birbaumer. The bci competition iii: Validating alternative approaches to actual bci problems. IEEE transactions on neural systems and rehabilitation engineering, 14(2):153–159, 2006.
+
+[4] Alois Schl¨ogl, Felix Lee, Horst Bischof, and Gert Pfurtscheller. Characterization of four-class motor imagery eeg data for the bci-competition 2005. Journal of neural engineering, 2(4):L14, 2005.
+
+[5] Muhammad Naeem, Clemens Brunner, Robert Leeb, Bernhard Graimann, and Gert Pfurtscheller. Seperability of four-class motor imagery data using independent components analysis. Journal of neural engineering, 3(3):208, 2006.
+
+[6] https://www.bbci.de/competition/iv/
+
+[7] SR Sreeja, Joytirmoy Rabha, KY Nagarjuna, Debasis Samanta, Pabitra Mitra, and Monalisa Sarma. Motor imagery eeg signal processing and classification using machine learning approach. In 2017 International Conference on New Trends in Computing Sciences (ICTCS), pages 61–66. IEEE, 2017.
+
+[8] Herbert Ramoser, Johannes Muller-Gerking, and Gert Pfurtscheller. Optimal spatial filtering of single trial eeg during imagined hand movement. IEEE transactions on rehabilitation engineering, 8(4):441–446, 2000.
+
+[9] Benjamin Blankertz, Ryota Tomioka, Steven Lemm, Motoaki Kawanabe, and Klaus-Robert Muller. Optimizing spatial filters for robust eeg singletrial analysis. IEEE Signal processing magazine, 25(1):41–56, 2007.
+
+[10] Benjamin Blankertz, K-R Muller, Gabriel Curio, Theresa M Vaughan, Gerwin Schalk, Jonathan R Wolpaw, Alois Schlogl, Christa Neuper, Gert Pfurtscheller, Thilo Hinterberger, et al. The bci competition 2003: progress and perspectives in detection and discrimination of eeg single trials. IEEE transactions on biomedical engineering, 51(6):1044–1051, 2004.
+
+[11] Benjamin Blankertz, K-R Muller, Dean J Krusienski, Gerwin Schalk, Jonathan R Wolpaw, Alois Schlogl, Gert Pfurtscheller, Jd R Millan,Michael Schroder, and Niels Birbaumer. The bci competition iii: Validating alternative approaches to actual bci problems. IEEE transactions on neural systems and rehabilitation engineering, 14(2):153–159, 2006.
+
+[7] Boris Reuderink and Mannes Poel. Robustness of the common spatial patterns algorithm in the bci-pipeline. University of Twente, Tech. Rep, 2008.
+
+[8] Moritz Grosse-Wentrup, Christian Liefhold, Klaus Gramann, and Martin Buss. Beamforming in noninvasive brain–computer interfaces. IEEE Transactions on Biomedical Engineering, 56(4):1209–1219, 2009.
+
+[9] 19. B Blankertz, M Kawanabe, R Tomioka, F Hohlefeld, and V Nikulin. M ¨uller, k.-r.(2008). invariant common spatial patterns: Alleviating nonstationarities in braincomputer interfacing. Advances in neural information processing systems, 20, 2008.
+
+[10] Haiping Lu, Konstantinos N Plataniotis, and Anastasios N Venetsanopoulos. Regularized common spatial patterns with generic learning for eeg signal classification. In 2009 Annual International Conference of the IEEE Engineering in medicine and biology society, pages 6599–6602. IEEE, 2009.
+
+[11] Hyohyeong Kang, Yunjun Nam, and Seungjin Choi. Composite common spatial pattern for subject-to-subject transfer. IEEE Signal Processing Letters, 16(8):683–686, 2009.
+
+[12] Fabien Lotte and Cuntai Guan. Spatially regularized common spatial patterns for eeg classification. In 2010 20th International Conference on Pattern Recognition, pages 3712–3715. IEEE, 2010.
+
+[13] Fabien Lotte and Cuntai Guan. Regularizing common spatial patterns to improve bci designs: unified theory and new algorithms. IEEE Transactions on biomedical Engineering, 58(2):355–362, 2010.
+
