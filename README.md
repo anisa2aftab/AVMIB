@@ -21,7 +21,7 @@ No. of electrodes: `118`
 |A1| 168| 112| 280 | 
 |A2| 224| 56| 280|
 |A3| 84| 196| 280|
-|A4| 56| 224| 280
+|A4| 56| 224| 280 
 |A5| 28|252| 280|
 
 https://www.bbci.de/competition/iii/
@@ -78,17 +78,52 @@ https://www.bbci.de/competition/iv/
 
 AVMIB interface represents each feature by individual pushbutton, hence, to access each functionality, pushbutton is the gateway as shown in Figures below. The first section is associated with the filtering and plotting of EEG signal before and after filtering. The second section is concerned with the subject wise accuracy assessment upon choosing a specific dataset and algorithm. The third section is related to the evaluation of performance metrics such as, Sensitivity, Specificity, Precision and Recall of each subject. The fourth section is about topographical plot of scalp. Each of the functionality is described by figures below.
 
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig3.jpg
+![Fig1](https://github.com/user-attachments/assets/9255886c-5f8f-4699-adc4-98ad3806b97e)
+        **Fig. 1: The primary user interface for AVMIB – The main menu consists of a simple
+        dialogue, in which a series of buttons is used to control different functionalities – (a) Button
+        panel representing gateway to each functionality, shown by dotted line. (b) Representing
+        the Brain Computer Interface (BCI) system signal processing pipeline**
+        
+![Fig2](https://github.com/user-attachments/assets/a31fb991-6686-4bab-9529-1ec3c5cf5102)
+        **Fig. 2: Graphical interface for raw and filtered EEG–(a) Drop-down menu and
+          button panel for the selection of dataset and subject. BCI III DSIVa dataset contains total
+          five subjects. The present plot is for subject1. (b) The panel consists of six subplots. x-axis
+          indicates time points, whereas y-axis indicates amplitude of EEG signal. The two graphs in
+          the first row represents the raw and filtered EEG signal for nine channels (F3, F4, C3, Cz,
+          C4, P3, P4, O1and O2) respectively as shown. The two graphs in the second row represents
+          the raw and filtered EEG signal for right hand movement respectively. The two graphs in
+          the third row represents the raw and filtered EEG signal for foot movement respectively. For
+          the present data-set right hand and foot imagery movement is considered as the control task**
+          
+![Fig3](https://github.com/user-attachments/assets/996a9091-3241-475d-9b39-fffa4233d54c)
+          **Fig. 3: Graphical interface for subjectwise accuracy –(a) Drop-down menu and
+          button panel for the selection of dataset and algorithm shown by dotted line. The present
+          table and bar graph is for dataset BCI III DSIVa and CSP algorithm. (b) The table shows
+          the performance accuracy of the LDA classification and the CSP matrix learning time in
+          seconds of all the five subjects present in dataset BC III DSIVa. (c) The bar graph represents
+          the performance accuracy of the LDA classification of all the five subjects present in dataset
+          BCI III DSIVa**
 
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig4.jpg
+![Fig4](https://github.com/user-attachments/assets/dc356513-99b8-4777-9a37-e725141e2ab1)
+          **Fig. 4: Graphical interface for subject wise performance metrics – (a) Dropdown
+          menu and button panel for the selection of dataset, algorithm and subject shown
+          by dotted line. The present table and graphs are for subject1 of dataset BCI III DSIIIa,
+          when CSP algorithm is chosen. (b) The table shows the performance metrics (Sensitivity,
+          Specificity, Precision and Recall) of subject1 of dataset BCI III DSIIIa. (c) The confusion
+          matrix displays the prediction results of subject1 of dataset BCI III DSIIIa, where blue
+          color represents correctly predicted class and light pink color represents incorrectly predicted
+          class. (d) It portrays the AUC-ROC curve for subject1 of dataset BCI III DSIIIa. The AUC
+          value of 0.99259 depicts better performance of the model for the selected subject**
 
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig5.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig6.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig7.jpg
-
-[Fig3] (https://github.com/user-attachments/assets/6c58e4a8-d8dc-4d6e-a198-719de41178e1)
+![Fig5](https://github.com/user-attachments/assets/46f5af16-c8a8-45e4-bf31-c5a8f79a2fbf)
+          **Fig. 5: Graphical interface for topographical map – (a) Drop-down menu and button
+          panel for the selection of dataset, algorithm, subject and filter pair shown by dotted line.
+          In case of CSP or RCSP the choice of filter pair is responsible for the formation of the
+          final CSP filter matrix. In the present case number of filter pair is chosen as 3 (filter pair1,
+          filter pair2, and filter pair3). (b) It represents the task description for all the three BCI
+          competition datasets under consideration with different number of subjects. (c) It displays
+          the topographical map of subject1 of dataset BCI IV DSIIa for SR CSP algorithm and filter
+          pair2**        
 
 ## Demo
 
