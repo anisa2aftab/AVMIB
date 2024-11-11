@@ -74,6 +74,19 @@ https://www.bbci.de/competition/iv/
 
 
 
+## Screenshots
+
+AVMIB interface represents each feature by individual pushbutton, hence, to access each functionality, pushbutton is the gateway as shown in Figures below. The first section is associated with the filtering and plotting of EEG signal before and after filtering. The second section is concerned with the subject wise accuracy assessment upon choosing a specific dataset and algorithm. The third section is related to the evaluation of performance metrics such as, Sensitivity, Specificity, Precision and Recall of each subject. The fourth section is about topographical plot of scalp. Each of the functionality is described by figures below.
+
+https://github.com/anisa2aftab/AVMIB/blob/main/Fig3.jpg
+
+https://github.com/anisa2aftab/AVMIB/blob/main/Fig4.jpg
+
+https://github.com/anisa2aftab/AVMIB/blob/main/Fig5.jpg
+
+https://github.com/anisa2aftab/AVMIB/blob/main/Fig6.jpg
+
+https://github.com/anisa2aftab/AVMIB/blob/main/Fig7.jpg
 ## Demo
 
 ### Below is the demo video link for each module
@@ -93,16 +106,3 @@ https://github.com/anisa2aftab/AVMIB/blob/main/AVMIB_documentation.pdf
 Here is the details installation steps
 
  https://github.com/anisa2aftab/AVMIB/blob/main/supplementary_doc.pdf   
-## Screenshots
-
-AVMIB interface represents each feature by individual pushbutton, hence, to access each functionality, pushbutton is the gateway as shown in Figures below. The first section is associated with the filtering and plotting of EEG signal before and after filtering. The second section is concerned with the subject wise accuracy assessment upon choosing a specific dataset and algorithm. The third section is related to the evaluation of performance metrics such as, Sensitivity, Specificity, Precision and Recall of each subject. The fourth section is about topographical plot of scalp. Each of the functionality is described by figures below.
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig3.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig4.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig5.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig6.jpg
-
-https://github.com/anisa2aftab/AVMIB/blob/main/Fig7.jpg
