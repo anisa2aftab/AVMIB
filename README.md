@@ -88,7 +88,7 @@ https://github.com/anisa2aftab/AVMIB/blob/main/Fig6.jpg
 
 https://github.com/anisa2aftab/AVMIB/blob/main/Fig7.jpg
 
-![Fig3](https://github.com/user-attachments/assets/6c58e4a8-d8dc-4d6e-a198-719de41178e1)
+[Fig3] (https://github.com/user-attachments/assets/6c58e4a8-d8dc-4d6e-a198-719de41178e1)
 
 ## Demo
 
